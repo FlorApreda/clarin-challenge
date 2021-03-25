@@ -1,13 +1,22 @@
+* {
+	box-sizing: border-box;
+}
+
 body {
 	background-color: #cccecd;
 	color: #636564;
+	border: 2px solid #636564;
 }
 
 main {
-	border: 2px solid #636564;
 	padding: 25px;
-	display: flex;
-	justify-content: center;
+}
+
+.contenedor-imagen-perfil {
+	width: 100%;
+	height: 175px;
+	overflow: hidden;
+	margin: 8px 0;
 }
 
 .foto-perfil {
@@ -20,11 +29,12 @@ main {
 
 .descripcion {
 	display: none;
+	font-size: 22px;
 }
 
 .titulo-datos-perfil {
 	margin-bottom: 0;
-	font-size: 16px;
+	font-size: 24px;
 }
 
 .lista-datos-perfil {
@@ -32,20 +42,21 @@ main {
 	list-style-type: none;
 	text-align: left;
 	padding: 0;
+	font-size: 22px;
 }
 
 .reproductor-video {
-	width: 250px;
+	width: 100%;
 	margin-bottom: 25px;
 }
 
-.imagenes {
-	/*margin: 30px 0;*/
+.imagen {
+	width: 100%;
 }
 
 .contenedor-imagen {
-	width: 250px;
-	height: 150px;
+	width: 100%;
+	height: 175px;
 	overflow: hidden;
 	margin: 8px 0;
 }
@@ -57,8 +68,16 @@ main {
 }
 
 @media (min-width: 1024px) {
+	body {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+	}
+
 	main {
-		padding: 60px;
+		padding: 20px;
+		width: 800px;
 	}
 
 	.contenedor-general {
@@ -68,18 +87,24 @@ main {
 	.datos {
 		display: flex;
 		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+
+	.contenedor-imagen-perfil {
+		width: 370px;
+		margin: 0;
 	}
 
 	.foto-perfil {
-		width: 50%;
+		width: 370px;
 	}
 
 	.datos-perfil {
-		width: 50%;
+		width: 40%;
 	}
 
 	.linea {
-		display: none;
+		border-bottom: none;
 	}
 
 	.descripcion {
@@ -101,6 +126,31 @@ main {
 		height: 370px;
 		overflow: hidden;
 		margin-top: 18px;
-		/*margin: 8px 25px;*/
+	}
+
+	.imagen {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+}
+
+@media (min-width: 1256px) {
+	main {
+		padding: 40px;
+		width: 1230px;
+	}
+
+	.datos-perfil {
+		width: 18%;
+	}
+
+	.contenedor-imagen-perfil {
+		width: 25%;
+	}
+
+	.contenedor-imagen {
+		width: 270px;
+		height: 270px;
 	}
 }
