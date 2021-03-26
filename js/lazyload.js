@@ -32,6 +32,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		const reproductorVideo = document.createElement('video')
 		reproductorVideo.setAttribute('src', './img/videoplayback.mp4')
 		reproductorVideo.setAttribute('controls', 'true')
+		reproductorVideo.setAttribute('autoplay', 'true')
 		reproductorVideo.setAttribute('poster', './img/video-preview.png')
 		reproductorVideo.classList.add('reproductor-video')
 
