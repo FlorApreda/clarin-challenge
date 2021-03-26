@@ -46,9 +46,10 @@ main {
 }
 
 .contenedor-vista-previa {
-	display: flex;
+	display: grid;
 	position: relative;
 	margin-bottom: 25px;
+	cursor: pointer;
 }
 
 .fa-play {
