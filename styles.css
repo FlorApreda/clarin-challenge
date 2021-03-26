@@ -27,11 +27,6 @@ main {
 	border-bottom: 3px solid #636564;
 }
 
-.descripcion {
-	display: none;
-	font-size: 22px;
-}
-
 .titulo-datos-perfil {
 	margin-bottom: 0;
 	font-size: 24px;
@@ -45,14 +40,25 @@ main {
 	font-size: 22px;
 }
 
+.descripcion {
+	display: none;
+	font-size: 22px;
+}
+
 .contenedor-vista-previa {
 	display: flex;
 	position: relative;
 	margin-bottom: 25px;
 }
 
-.eliminar-preview {
-	display: none;
+.fa-play {
+	color: #fafafa;
+	font-size: 35px;
+	position: absolute;
+	z-index: 101;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
 
 .overlay {
@@ -67,23 +73,9 @@ main {
 	width: 100%;
 }
 
-.fa-play {
-	color: #fafafa;
-	font-size: 35px;
-	position: absolute;
-	z-index: 101;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-}
-
 .reproductor-video {
 	width: 100%;
 	margin-bottom: 25px;
-}
-
-.imagen {
-	width: 100%;
 }
 
 .contenedor-imagen {
@@ -109,10 +101,6 @@ main {
 
 	main {
 		padding: 20px;
-		width: 800px;
-	}
-
-	.contenedor-general {
 		width: 800px;
 	}
 
@@ -147,10 +135,6 @@ main {
 		font-size: 65px;
 	}
 
-	.reproductor-video {
-		width: 100%;
-	}
-
 	.imagenes {
 		display: flex;
 		flex-wrap: wrap;
@@ -162,12 +146,6 @@ main {
 		height: 370px;
 		overflow: hidden;
 		margin-top: 18px;
-	}
-
-	.imagen {
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
 	}
 }
 
@@ -181,12 +159,12 @@ main {
 		width: 18%;
 	}
 
-	.fa-play {
-		font-size: 75px;
-	}
-
 	.contenedor-imagen-perfil {
 		width: 25%;
+	}
+
+	.fa-play {
+		font-size: 75px;
 	}
 
 	.contenedor-imagen {
