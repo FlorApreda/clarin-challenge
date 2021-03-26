@@ -1,7 +1,10 @@
 document.addEventListener('DOMContentLoaded', function () {
+	document.addEventListener('scroll', lazyload)
+	window.addEventListener('resize', lazyload)
+	window.addEventListener('orientationChange', lazyload)
+
 	const lazyImages = document.querySelectorAll('img.lazy')
 	let lazyTimer
-
 	function lazyload() {
 		if (lazyTimer) {
 			clearTimeout(lazyTimer)
@@ -23,7 +26,15 @@ document.addEventListener('DOMContentLoaded', function () {
 		}, 5)
 	}
 
-	document.addEventListener('scroll', lazyload)
-	window.addEventListener('resize', lazyload)
-	window.addEventListener('orientationChange', lazyload)
+	const verVideo = document.querySelector('.contenedor-vista-previa')
+	verVideo.addEventListener('click', function () {
+		verVideo.remove()
+		const reproductorVideo = document.createElement('video')
+		reproductorVideo.setAttribute('src', './img/videoplayback.mp4')
+		reproductorVideo.setAttribute('controls', 'true')
+		reproductorVideo.setAttribute('poster', './img/video-preview.png')
+		reproductorVideo.classList.add('reproductor-video')
+
+		document.querySelector('.video').appendChild(reproductorVideo)
+	})
 })
