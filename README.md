@@ -19,3 +19,7 @@ Para el sistema de trackeo de usuarios se armó un sencillo script que utiliza u
 Luego de obtener toda la información requerida se hace el POST.
 
 ---
+
+### Para visualizar el proyecto:
+
+https://florapreda.github.io/clarin-challenge/
